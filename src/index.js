@@ -3,17 +3,17 @@ import threeDots from './images/three-dots.png';
 
 const todoList = [
   {
-    index: 0,
+    index: 2,
     completed: false,
     description: 'Write Code',
   },
   {
-    index: 1,
+    index: 0,
     completed: true,
     description: 'Drink coffee and hear lecture',
   },
   {
-    index: 2,
+    index: 1,
     completed: false,
     description: 'Play Games',
   },
@@ -21,6 +21,16 @@ const todoList = [
 
 window.addEventListener('load', () => {
   const listElem = document.querySelector('#list');
+  todoList.sort((a, b) => {
+    if (a.index > b.index) {
+      return 1;
+    }
+    if (a.index < b.index) {
+      return -1;
+    }
+    return 0;
+  });
+
   todoList.forEach((task) => {
     listElem.innerHTML += `<li>
     <input type="checkbox" name='completed' value='${task.completed ? 'completed' : 'not-completed'}' ${task.completed ? 'checked' : ''}>
