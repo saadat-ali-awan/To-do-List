@@ -65,8 +65,12 @@ header > img {
   align-items: center;
 }
 
+.is-selected > img {
+  content: url('../images/delete.png');
+  cursor: pointer !important;
+}
+
 .main > ul > li > img {
-  width: 24px;
   height: 24px;
   cursor: all-scroll;
 }
@@ -74,4 +78,16 @@ header > img {
 .main > ul > li > span {
   flex: 1;
   margin: 0 8px;
+  display: flex;
+}
+
+.is-selected {
+  background-color: #e3e2ae;
+}
+
+.is-selected > span > input {
+  flex: 1;
+  outline: none;
+  border: none;
+  background: #e3e2ae;
 }
