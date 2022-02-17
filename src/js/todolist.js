@@ -47,4 +47,13 @@ export default class TodoList {
   saveToLocalStorage() {
     localStorage.setItem('list', this.list);
   }
+
+  removeCompletedTasks() {
+    this.list.filter((task) => {
+      if (task.completed) {
+        return false;
+      }
+      return true;
+    });
+  }
 }
