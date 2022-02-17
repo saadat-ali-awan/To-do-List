@@ -5,6 +5,10 @@ export default class TodoList {
     this.list = [];
   }
 
+  init() {
+    this.list = localStorage.getItem('list');
+  }
+
   addTask(completed, description) {
     this.list.add(Task(this.list.length, completed, description));
   }
@@ -26,5 +30,21 @@ export default class TodoList {
   editTaskDescription(index, description) {
     this.list[index].description = description;
     this.saveToLocalStorage();
+  }
+
+  sortTasks() {
+    this.list.sort((a, b) => {
+      if (a.index > b.index) {
+        return 1;
+      }
+      if (a.index < b.index) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+
+  saveToLocalStorage() {
+    localStorage.setItem('list', this.list);
   }
 }
