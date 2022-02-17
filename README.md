@@ -23,7 +23,8 @@
 - Use the command: git clone git@github.com:Saadat123456/To-do-List.git
 - Open index.html file
 - Run npm install in the terminal to install node modules
-- Run Live Server
+- Execute npm run dev in terminal to build the development files
+- To start a server run npm start and the server would be started on port 8080
 
 
 ## Authors
