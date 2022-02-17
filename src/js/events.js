@@ -7,6 +7,7 @@ class Events {
       if (event.keyCode === 13) {
         if (this.domElements.getInputElement().value !== '') {
           todolist.addTask(false, this.domElements.getInputElement().value);
+          this.domElements.getInputElement().value = '';
         }
       }
     });
