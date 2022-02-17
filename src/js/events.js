@@ -11,6 +11,12 @@ class Events {
         }
       }
     });
+
+    window.addEventListener('popstate', () => {
+      if (document.location.hash === '#complete') {
+        todolist.removeCompletedTasks();
+      }
+    });
   }
 }
 export default new Events();
