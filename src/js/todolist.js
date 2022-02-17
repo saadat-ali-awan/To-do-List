@@ -88,9 +88,9 @@ class TodoList {
   removeCompletedTasks() {
     this.list.filter((task) => {
       if (task.completed) {
+        this.deleteTask(task.index);
         return false;
       }
-      this.updateDOM(task.index);
       return true;
     });
   }
