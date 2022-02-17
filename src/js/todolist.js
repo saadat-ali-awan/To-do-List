@@ -22,4 +22,9 @@ export default class TodoList {
     this.list = newList;
     this.saveToLocalStorage();
   }
+
+  editTaskDescription(index, description) {
+    this.list[index].description = description;
+    this.saveToLocalStorage();
+  }
 }
