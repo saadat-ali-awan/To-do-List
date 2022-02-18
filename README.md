@@ -25,6 +25,8 @@
 - Run npm install in the terminal to install node modules
 - Execute npm run dev in terminal to build the development files
 - To start a server run npm start and the server would be started on port 8080
+- To Add the new task just enter the task description in the input field and press enter.
+- To Edit the task click on the three task on the right side of the task for a while and it would become editable.
 
 
 ## Authors

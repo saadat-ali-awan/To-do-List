@@ -86,13 +86,18 @@ class TodoList {
   }
 
   removeCompletedTasks() {
-    this.list.filter((task) => {
+    let newIndex = 0;
+    this.list = this.list.filter((task) => {
       if (task.completed) {
-        this.deleteTask(task.index);
         return false;
       }
+      task.index = newIndex;
+      newIndex += 1;
       return true;
     });
+    this.saveToLocalStorage();
+    domElements.getListElement().innerHTML = '';
+    this.init();
   }
 
   addEventListenerToListItem(item, index) {
