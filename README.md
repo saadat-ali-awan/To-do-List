@@ -28,7 +28,6 @@
 - To Add the new task just enter the task description in the input field and press enter.
 - To Edit the task click on the three task on the right side of the task for a while and it would become editable.
 
-
 ## Authors
 
 👤 **Saadat Ali**

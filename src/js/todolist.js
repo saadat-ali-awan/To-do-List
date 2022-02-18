@@ -139,7 +139,7 @@ class TodoList {
         });
         item.querySelector('span').textContent = '';
         item.querySelector('span').append(newInputElem);
-      }, 1000);
+      }, 300);
     });
 
     item.addEventListener('mouseup', () => {
