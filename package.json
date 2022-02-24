@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Saadat123456/To-do-List#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.6.0",
     "eslint": "^7.32.0",
@@ -39,6 +40,7 @@
   },
   "dependencies": {
     "html-loader": "^3.1.0",
-    "html-webpack-plugin": "^5.5.0"
+    "html-webpack-plugin": "^5.5.0",
+    "jsdom": "^19.0.0"
   }
 }
