@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1645740501826" clover="3.2.0">
-  <project timestamp="1645740501827" name="All files">
-    <metrics statements="81" coveredstatements="28" conditionals="24" coveredconditionals="5" methods="27" coveredmethods="12" elements="132" coveredelements="45" complexity="0" loc="81" ncloc="81" packages="2" files="5" classes="5"/>
+<coverage generated="1645740976005" clover="3.2.0">
+  <project timestamp="1645740976005" name="All files">
+    <metrics statements="81" coveredstatements="39" conditionals="24" coveredconditionals="7" methods="27" coveredmethods="14" elements="132" coveredelements="60" complexity="0" loc="81" ncloc="81" packages="2" files="5" classes="5"/>
     <package name="src.js">
-      <metrics statements="79" coveredstatements="26" conditionals="24" coveredconditionals="5" methods="26" coveredmethods="11"/>
+      <metrics statements="79" coveredstatements="37" conditionals="24" coveredconditionals="7" methods="26" coveredmethods="13"/>
       <file name="dom_manipulation.js" path="E:\Microverse\To-do-List\src\js\dom_manipulation.js">
         <metrics statements="38" coveredstatements="14" conditionals="14" coveredconditionals="3" methods="13" coveredmethods="6"/>
         <line num="9" count="1" type="stmt"/>
@@ -56,33 +56,33 @@
       </file>
       <file name="task.js" path="E:\Microverse\To-do-List\src\js\task.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="4" count="4" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
       </file>
       <file name="todo_list.js" path="E:\Microverse\To-do-List\src\js\todo_list.js">
-        <metrics statements="32" coveredstatements="9" conditionals="8" coveredconditionals="2" methods="9" coveredmethods="4"/>
+        <metrics statements="32" coveredstatements="20" conditionals="8" coveredconditionals="4" methods="9" coveredmethods="6"/>
         <line num="4" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="cond" truecount="2" falsecount="2"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
         <line num="48" count="0" type="cond" truecount="0" falsecount="2"/>
