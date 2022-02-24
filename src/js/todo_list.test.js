@@ -39,4 +39,23 @@ describe('TodoList Test', () => {
     });
     expect(document.querySelector('#list').querySelectorAll('li').length).toBe(2);
   });
+
+  test('Remove Task', () => {
+    expect(TodoList.list[0].description).toBe('Task 1');
+    expect(document.querySelector('#list').querySelectorAll('li').length).toBe(2);
+
+    TodoList.deleteTask(0, DOMManipulation.listElem);
+    expect(TodoList.list.length).toBe(1);
+    const data = JSON.parse(localStorage.getItem('taskList'));
+    const tempData = data.map((value) => new Task(value.index, value.completed, value.description));
+    expect(tempData.length).toBe(TodoList.list.length);
+    tempData.forEach((task, index) => {
+      expect(task.description).toBe(TodoList.list[index].description);
+      expect(task.completed).toBe(TodoList.list[index].completed);
+      expect(task.index).toBe(TodoList.list[index].index);
+    });
+
+    expect(document.querySelector('#list').querySelectorAll('li').length).toBe(1);
+    expect(TodoList.list[0].description).toBe('Task 2');
+  });
 });
