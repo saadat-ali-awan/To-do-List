@@ -74,4 +74,8 @@ describe('TodoList Test', () => {
     expect(TodoList.list[0].completed).toBe(true);
   });
 
+  test('Clear All Completed', () => {
+    TodoList.clearCompletedTask(DOMManipulation.listElem);
+    expect(TodoList.list.length).toBe(0);
+  });
 });
