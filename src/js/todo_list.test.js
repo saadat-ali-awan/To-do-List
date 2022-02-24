@@ -59,7 +59,9 @@ describe('TodoList Test', () => {
     expect(document.querySelector('#list').querySelectorAll('li').length).toBe(1);
     expect(TodoList.list[0].description).toBe('Task 2');
   });
+});
 
+describe('Description', () => {
   test('Update Description', () => {
     const listItem = DOMManipulation.listElem.querySelector('#item0');
     const inputElem = listItem.querySelector('input');
