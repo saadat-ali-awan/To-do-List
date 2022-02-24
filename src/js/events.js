@@ -1,22 +1,26 @@
-import todolist from './todolist.js';
+import DOMManipulation from './dom_manipulation.js';
+import TodoList from './todo_list.js';
 
 class Events {
-  init(domElements) {
-    this.domElements = domElements;
-    this.domElements.getInputElement().addEventListener('keyup', (event) => {
+  static addItemInput;
+
+  static clearCompletedButton;
+
+  static init() {
+    this.addItemInput = document.querySelector('.main > input');
+    this.addItemInput.addEventListener('keypress', (event) => {
       if (event.keyCode === 13) {
-        if (this.domElements.getInputElement().value !== '') {
-          todolist.addTask(false, this.domElements.getInputElement().value);
-          this.domElements.getInputElement().value = '';
+        if (this.addItemInput.value !== '') {
+          DOMManipulation.addTask(TodoList.addTask(false, this.addItemInput.value));
+          this.addItemInput.value = '';
         }
       }
     });
-
-    window.addEventListener('popstate', () => {
-      if (document.location.hash === '#complete') {
-        todolist.removeCompletedTasks();
-      }
+    this.clearCompletedButton = document.querySelector('a[href="#complete"]');
+    this.clearCompletedButton.addEventListener('click', () => {
+      TodoList.clearCompletedTask(DOMManipulation.listElem);
     });
   }
 }
-export default new Events();
+
+export default Events;
