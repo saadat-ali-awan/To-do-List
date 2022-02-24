@@ -2,6 +2,7 @@
  * @jest-environment jsdom
  */
 import DOMManipulation from './dom_manipulation.js';
+import { changeComplete } from './status.js';
 import Task from './task.js';
 import TodoList from './todo_list.js';
 
@@ -67,4 +68,10 @@ describe('TodoList Test', () => {
     DOMManipulation.updateDesc(inputElem, listItem, id);
     expect(TodoList.list[0].description).toBe('Task 2: Write Code');
   });
+
+  test('Completed Status', () => {
+    changeComplete(true, 'item0');
+    expect(TodoList.list[0].completed).toBe(true);
+  });
+
 });
