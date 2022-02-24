@@ -1,9 +1,13 @@
+import DOMManipulation from './js/dom_manipulation.js';
+import Events from './js/events.js';
+import TodoList from './js/todo_list.js';
 import './stylesheet/main.css';
-import events from './js/events.js';
-import todolist from './js/todolist.js';
-import domElements from './js/dom_elements.js';
 
 window.addEventListener('load', () => {
-  todolist.init();
-  events.init(domElements);
+  Events.init();
+  DOMManipulation.init();
+  TodoList.init();
+  TodoList.list.forEach((task) => {
+    DOMManipulation.addTask(task);
+  });
 });
