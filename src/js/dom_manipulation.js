@@ -58,16 +58,20 @@ export default class DOMManipulation {
     const id = parseInt(elem.id.substring(4), 10);
     inputElem.addEventListener('keypress', (event) => {
       if (event.keyCode === 13) {
-        if (inputElem.value !== '') {
-          inputElem.parentElement.innerHTML = inputElem.value;
-          TodoList.list[id].description = inputElem.value;
-          TodoList.addToStorage();
-        } else {
-          inputElem.parentElement.innerHTML = TodoList.list[id].description;
-        }
-        elem.classList.remove('is-selected');
+        this.updateDesc(inputElem, elem, id);
       }
     });
+  }
+
+  static updateDesc(inputElem, elem, id) {
+    if (inputElem.value !== '') {
+      inputElem.parentElement.innerHTML = inputElem.value;
+      TodoList.list[id].description = inputElem.value;
+      TodoList.addToStorage();
+    } else {
+      inputElem.parentElement.innerHTML = TodoList.list[id].description;
+    }
+    elem.classList.remove('is-selected');
   }
 
   static imageClickListener(elem) {

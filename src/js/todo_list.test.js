@@ -2,6 +2,7 @@
  * @jest-environment jsdom
  */
 import DOMManipulation from './dom_manipulation.js';
+import { changeComplete } from './status.js';
 import Task from './task.js';
 import TodoList from './todo_list.js';
 
@@ -57,5 +58,26 @@ describe('TodoList Test', () => {
 
     expect(document.querySelector('#list').querySelectorAll('li').length).toBe(1);
     expect(TodoList.list[0].description).toBe('Task 2');
+  });
+});
+
+describe('Description', () => {
+  test('Update Description', () => {
+    const listItem = DOMManipulation.listElem.querySelector('#item0');
+    const inputElem = listItem.querySelector('input');
+    inputElem.value = 'Task 2: Write Code';
+    const id = parseInt(listItem.id.substring(4), 10);
+    DOMManipulation.updateDesc(inputElem, listItem, id);
+    expect(TodoList.list[0].description).toBe('Task 2: Write Code');
+  });
+
+  test('Completed Status', () => {
+    changeComplete(true, 'item0');
+    expect(TodoList.list[0].completed).toBe(true);
+  });
+
+  test('Clear All Completed', () => {
+    TodoList.clearCompletedTask(DOMManipulation.listElem);
+    expect(TodoList.list.length).toBe(0);
   });
 });
