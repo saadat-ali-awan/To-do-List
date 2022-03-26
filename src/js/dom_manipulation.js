@@ -1,6 +1,7 @@
 // import threeDots from '../images/three-dots.png';
 import { changeComplete } from './status.js';
 import TodoList from './todo_list';
+import dotImage from '../images/three-dots.png';
 
 export default class DOMManipulation {
   static listElem;
@@ -18,7 +19,7 @@ export default class DOMManipulation {
     }
     elem.innerHTML += `<input type="checkbox" name='completed' value='${task.completed ? 'completed' : 'not-completed'}' ${task.completed ? 'checked' : ''}>
     <span>${task.description}</span>
-    <img src='#' alt="Three Dots Button">`;
+    <img src=${dotImage} alt="Three Dots Button">`;
     this.addClickListener(elem);
     this.listElem.append(elem);
   }
